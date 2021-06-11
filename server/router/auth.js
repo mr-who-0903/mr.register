@@ -57,8 +57,8 @@ router.get('/getdata', authToGet, (req, res) =>{               // here authentic
 
 // FOR GETTING ALL DATA
 router.get('/getuser', authenticate, (req, res) =>{               // here authenticate is a middleware which verifies token   
-    // inside cookies with the token in the db else it will 
-    res.send(req.rootUser);                                     // redirect user to signin page.
+                                                                  // inside cookies with the token in the db else it will 
+    res.send(req.rootUser);                                       // redirect user to signin page.
 });
 
 // TO DELETE DATA
