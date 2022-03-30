@@ -50,12 +50,12 @@ router.get('/dashboard', authenticate, (req, res) =>{               // here auth
 
 
 // FOR GETTING ALL DATA
-router.get('/getdata', authToGet, (req, res) =>{               // here authenticate is a middleware which verifies token   
+router.get('/getdata', authToGet, (req, res) =>{               // here authToGet is a middleware which verifies token   
                                                                // inside cookies with the token in the db else it will 
     res.send(req.allData);                                     // redirect user to signin page.
 });
 
-// FOR GETTING ALL DATA
+// FOR GETTING USER DATA
 router.get('/getuser', authenticate, (req, res) =>{               // here authenticate is a middleware which verifies token   
                                                                   // inside cookies with the token in the db else it will 
     res.send(req.rootUser);                                       // redirect user to signin page.
