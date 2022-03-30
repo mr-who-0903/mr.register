@@ -29,7 +29,7 @@ router.post('/login', async (req, res) =>{
                 let token = await findUser.generateAuthToken(); // generate token in userSchema.js file, save it to db.
                 console.log(token);
 
-                res.cookie('jwtoken', token, {
+                res.cookie('jwtoken', token, {                // store token into cookies
                     expires: new Date(Date.now() + 300000),   // cookie will expire after 300000 milisec = 5min after login
                     httpOnly:true                                  // then user have to again log in  
                 });
